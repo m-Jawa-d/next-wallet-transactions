@@ -16,7 +16,6 @@ const metadata = {
     url: typeof window !== 'undefined' ? window.location.origin : 'https://web3modal.com',
     icons: ['https://avatars.githubusercontent.com/u/37784886']
 }
-
 const chains = [sepolia]
 const config = defaultWagmiConfig({
     chains,
