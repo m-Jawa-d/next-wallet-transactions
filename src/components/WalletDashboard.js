@@ -198,7 +198,7 @@ export default function WalletDashboard() {
                     <div className="transaction-info">
                         <p><strong>Last Transaction:</strong></p>
                         <a
-                            href={`https://sepolia.etherscan.io/tx/${lastTxHash}`}
+                            href={`https://bsc.etherscan.io/tx/${lastTxHash}`}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="tx-link"

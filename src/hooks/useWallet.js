@@ -2,7 +2,7 @@
 
 import { useAccount, useConnect, useDisconnect, useChainId, useSwitchChain } from 'wagmi'
 import { useWeb3Modal } from '@web3modal/wagmi/react'
-import { sepolia } from 'wagmi/chains'
+import { bsc } from 'wagmi/chains'
 
 export function useWallet() {
     const { open } = useWeb3Modal()
@@ -30,9 +30,9 @@ export function useWallet() {
     }
 
     const switchToSepolia = async () => {
-        if (chainId !== sepolia.id) {
+        if (chainId !== bsc.id) {
             try {
-                await switchChain({ chainId: sepolia.id })
+                await switchChain({ chainId: bsc.id })
             } catch (error) {
                 console.error('Failed to switch to Sepolia:', error)
                 throw error
@@ -40,7 +40,7 @@ export function useWallet() {
         }
     }
 
-    const isOnSepolia = chainId === sepolia.id
+    const isOnSepolia = chainId === bsc.id
 
     return {
         address,
